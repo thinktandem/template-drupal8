@@ -21,5 +21,6 @@ if (isset($_SERVER['LANDO'])) {
 
   // And a bogus hashsalt for now
   $settings['hash_salt'] = json_encode($databases);
-
+  // Fixes annoying perm issues on local.
+  $settings['skip_permissions_hardening'] = TRUE;
 }
