@@ -5,12 +5,18 @@ checks:
   method-lines:
     config:
       threshold: 40
+  method-complexity:
+    config:
+      threshold: 8
 plugins:
   phpmd:
     enabled: true
     config:
       file_extensions: "php,inc,module,install,theme"
       rulesets: ".phpmd.xml"
+    checks:
+      Controversial/Superglobals:
+        enabled: false
   phpcodesniffer:
     enabled: true
     config:
