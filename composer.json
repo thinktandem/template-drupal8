@@ -21,7 +21,7 @@
         "cweagans/composer-patches": "^1.6.5",
         "drupal-composer/drupal-scaffold": "^2.5",
         "drupal/console": "^1.0.2",
-        "drupal/core": "^8.6.0",
+        "drupal/core": "^8.7.0",
         "drush/drush": "^9.0.0",
         "vlucas/phpdotenv": "^2.4",
         "webflo/drupal-finder": "^1.0.0",
@@ -33,7 +33,7 @@
         "behat/mink": "~1.7",
         "behat/mink-extension": "^2.2",
         "behat/mink-goutte-driver": "~1.2",
-        "drupal/coder": "^8.2.12",
+        "drupal/coder": "^8.3",
         "drupal/drupal-extension": "^3.1",
         "drush-ops/behat-drush-endpoint": "^0.0.4",
         "jcalderonzumba/gastonjs": "~1.0.2",
@@ -43,9 +43,9 @@
         "overtrue/phplint": "^0.2.4",
         "phpstan/phpstan-deprecation-rules": "^0.11.0",
         "phpunit/phpunit": "^6.5",
-        "squizlabs/php_codesniffer": "2.*",
+        "squizlabs/php_codesniffer": "3.*",
         "symfony/css-selector": "^3.4.0",
-        "webflo/drupal-core-require-dev": "^8.6.0"
+        "webflo/drupal-core-require-dev": "^8.7.0"
     },
     "conflict": {
         "drupal/drupal": "*"
