@@ -68,4 +68,11 @@ tooling:
   behat:
     service: appserver
     cmd: /app/vendor/bin/behat
-
+  test:
+    service: appserver
+    description: Run Tests Locally
+    cmd:
+      - appserver: composer lint
+      - appserver: /app/vendor/bin/phpunit -c web/core --testsuite=unit --exclude-group Composer web/modules/custom
+      - appserver: /app/vendor/bin/phpunit -c web/core --testsuite unit --exclude-group Composer web/themes/custom
+      - appserver: /app/vendor/bin/phpstan analyse web/modules/custom web/themes/custom
