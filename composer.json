@@ -67,7 +67,7 @@
         "fix": "phpcbf --standard=Drupal --ignore=*/node_modules/*,/vendor/*,*.md,*.tpl.php,*.css,*.scss --extensions=install,module,php,inc web/modules/custom web/themes/custom web/profiles/custom",
         "lint": [
             "phplint",
-            "phpcs -n --report=full --standard=Drupal --ignore=*.tpl.php --extensions=in    stall,module,php,inc web/modules web/themes web/profiles"
+            "phpcs -n --report=full --standard=Drupal --ignore=*.tpl.php --extensions=install,module,php,inc web/modules web/themes web/profiles"
         ],
         "pre-install-cmd": [
             "DrupalProject\\composer\\ScriptHandler::checkComposerVersion"
