@@ -37,7 +37,7 @@
         "drupal/coder": "^8.3",
         "drupal/drupal-extension": "^3.1",
         "drush-ops/behat-drush-endpoint": "^0.0.4",
-        "jcalderonzumba/gastonjs": "~1.0.2",
+        "jcalderonzumba/gastonjs": "~1.2.0",
         "jcalderonzumba/mink-phantomjs-driver": "~0.3.1",
         "mglaman/phpstan-drupal": "^0.11.2",
         "mikey179/vfsstream": "~1.2",
