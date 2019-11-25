@@ -4,7 +4,7 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#installing-dependencies",
         "This file is @generated automatically"
     ],
-    "content-hash": "aad912e971f650d3b665ab3885677f25",
+    "content-hash": "e729bf0d6546b4f94665c4df0540601b",
     "packages": [
         {
             "name": "alchemy/zippy",
@@ -1154,6 +1154,7 @@
             ],
             "description": "Promoting the interoperability of container objects (DIC, SL, etc.)",
             "homepage": "https://github.com/container-interop/container-interop",
+            "abandoned": "psr/container",
             "time": "2017-02-14T19:40:03+00:00"
         },
         {
@@ -7219,27 +7220,29 @@
         },
         {
             "name": "drush-ops/behat-drush-endpoint",
-            "version": "0.0.4",
+            "version": "9.3.0",
             "source": {
                 "type": "git",
                 "url": "https://github.com/drush-ops/behat-drush-endpoint.git",
-                "reference": "aba768db7338b2fe1f17693421760baadb37a39e"
+                "reference": "06e290cd5f477186d9df8501b1991ebd80f652fc"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/drush-ops/behat-drush-endpoint/zipball/aba768db7338b2fe1f17693421760baadb37a39e",
-                "reference": "aba768db7338b2fe1f17693421760baadb37a39e",
+                "url": "https://api.github.com/repos/drush-ops/behat-drush-endpoint/zipball/06e290cd5f477186d9df8501b1991ebd80f652fc",
+                "reference": "06e290cd5f477186d9df8501b1991ebd80f652fc",
                 "shasum": ""
             },
             "require": {
-                "composer/installers": "~1.0",
                 "drupal/drupal-driver": "*",
                 "php": ">=5.3.0"
+            },
+            "conflict": {
+                "drush/drush": "<8.2 || >=9.0 <9.6.0 || >=10.0"
             },
             "type": "drupal-drush",
             "notification-url": "https://packagist.org/downloads/",
             "license": [
-                "GPLv2"
+                "GPL-2.0-or-later"
             ],
             "description": "Drush commandfile for use with drupal/drupal-driver.",
             "homepage": "https://github.com/drush-ops/behat-drush-endpoint",
@@ -7248,7 +7251,7 @@
                 "Drush",
                 "testing"
             ],
-            "time": "2015-11-11T07:34:40+00:00"
+            "time": "2019-03-29T17:31:34+00:00"
         },
         {
             "name": "fabpot/goutte",
