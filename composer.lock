@@ -4,7 +4,7 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#installing-dependencies",
         "This file is @generated automatically"
     ],
-    "content-hash": "aad912e971f650d3b665ab3885677f25",
+    "content-hash": "da47be428f8aecdd20f19abc48b6b1e1",
     "packages": [
         {
             "name": "alchemy/zippy",
@@ -1154,6 +1154,7 @@
             ],
             "description": "Promoting the interoperability of container objects (DIC, SL, etc.)",
             "homepage": "https://github.com/container-interop/container-interop",
+            "abandoned": "psr/container",
             "time": "2017-02-14T19:40:03+00:00"
         },
         {
@@ -8348,24 +8349,28 @@
         },
         {
             "name": "overtrue/phplint",
-            "version": "0.2.4",
+            "version": "1.2.0",
             "source": {
                 "type": "git",
                 "url": "https://github.com/overtrue/phplint.git",
-                "reference": "a91ee994f098afe256e2926140e916d25838f4fb"
+                "reference": "2f822d72db3be32d872d32aa001b2f1d13aeff6a"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/overtrue/phplint/zipball/a91ee994f098afe256e2926140e916d25838f4fb",
-                "reference": "a91ee994f098afe256e2926140e916d25838f4fb",
+                "url": "https://api.github.com/repos/overtrue/phplint/zipball/2f822d72db3be32d872d32aa001b2f1d13aeff6a",
+                "reference": "2f822d72db3be32d872d32aa001b2f1d13aeff6a",
                 "shasum": ""
             },
             "require": {
+                "ext-json": "*",
                 "php": ">=5.5.9",
-                "symfony/console": "^2.7|^3.0",
-                "symfony/finder": "^2.7|^3.0",
-                "symfony/process": "^2.7|^3.0",
-                "symfony/yaml": "^2.7|^3.0"
+                "symfony/console": "^3.2|^4.0|^5.0",
+                "symfony/finder": "^3.0|^4.0|^5.0",
+                "symfony/process": "^3.0|^4.0|^5.0",
+                "symfony/yaml": "^3.0|^4.0|^5.0"
+            },
+            "require-dev": {
+                "jakub-onderka/php-console-highlighter": "^0.3.2 || ^0.4"
             },
             "bin": [
                 "bin/phplint"
@@ -8393,7 +8398,7 @@
                 "phplint",
                 "syntax"
             ],
-            "time": "2017-07-07T09:17:59+00:00"
+            "time": "2019-11-23T15:35:00+00:00"
         },
         {
             "name": "phar-io/manifest",
