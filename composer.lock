@@ -4,7 +4,7 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#installing-dependencies",
         "This file is @generated automatically"
     ],
-    "content-hash": "9b0a246f24ef5c74c000b1ebad59cf32",
+    "content-hash": "5265c4664ec2bebbeb472852feccd3bc",
     "packages": [
         {
             "name": "alchemy/zippy",
@@ -4531,16 +4531,16 @@
         },
         {
             "name": "symfony/dependency-injection",
-            "version": "v3.4.35",
+            "version": "v3.4.36",
             "source": {
                 "type": "git",
                 "url": "https://github.com/symfony/dependency-injection.git",
-                "reference": "0ea4d39ca82409a25a43b61ce828048a90000920"
+                "reference": "0d201916bfb3af939fec3c0c8815ea16c60ac1a2"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/symfony/dependency-injection/zipball/0ea4d39ca82409a25a43b61ce828048a90000920",
-                "reference": "0ea4d39ca82409a25a43b61ce828048a90000920",
+                "url": "https://api.github.com/repos/symfony/dependency-injection/zipball/0d201916bfb3af939fec3c0c8815ea16c60ac1a2",
+                "reference": "0d201916bfb3af939fec3c0c8815ea16c60ac1a2",
                 "shasum": ""
             },
             "require": {
@@ -4598,7 +4598,7 @@
             ],
             "description": "Symfony DependencyInjection Component",
             "homepage": "https://symfony.com",
-            "time": "2019-11-08T16:18:30+00:00"
+            "time": "2019-12-01T08:33:36+00:00"
         },
         {
             "name": "symfony/dom-crawler",
@@ -5363,16 +5363,16 @@
         },
         {
             "name": "symfony/process",
-            "version": "v3.4.35",
+            "version": "v3.4.36",
             "source": {
                 "type": "git",
                 "url": "https://github.com/symfony/process.git",
-                "reference": "c19da50bc3e8fa7d60628fdb4ab5d67de534cf3e"
+                "reference": "9a4545c01e1e4f473492bd52b71e574dcc401ca2"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/symfony/process/zipball/c19da50bc3e8fa7d60628fdb4ab5d67de534cf3e",
-                "reference": "c19da50bc3e8fa7d60628fdb4ab5d67de534cf3e",
+                "url": "https://api.github.com/repos/symfony/process/zipball/9a4545c01e1e4f473492bd52b71e574dcc401ca2",
+                "reference": "9a4545c01e1e4f473492bd52b71e574dcc401ca2",
                 "shasum": ""
             },
             "require": {
@@ -5408,7 +5408,7 @@
             ],
             "description": "Symfony Process Component",
             "homepage": "https://symfony.com",
-            "time": "2019-10-24T15:33:53+00:00"
+            "time": "2019-11-28T10:05:51+00:00"
         },
         {
             "name": "symfony/psr-http-message-bridge",
@@ -7218,27 +7218,32 @@
         },
         {
             "name": "drush-ops/behat-drush-endpoint",
-            "version": "0.0.4",
+            "version": "8.2.4",
             "source": {
                 "type": "git",
                 "url": "https://github.com/drush-ops/behat-drush-endpoint.git",
-                "reference": "aba768db7338b2fe1f17693421760baadb37a39e"
+                "reference": "2dfa934284cbb19efda5f879011879e7ee67ef2e"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/drush-ops/behat-drush-endpoint/zipball/aba768db7338b2fe1f17693421760baadb37a39e",
-                "reference": "aba768db7338b2fe1f17693421760baadb37a39e",
+                "url": "https://api.github.com/repos/drush-ops/behat-drush-endpoint/zipball/2dfa934284cbb19efda5f879011879e7ee67ef2e",
+                "reference": "2dfa934284cbb19efda5f879011879e7ee67ef2e",
                 "shasum": ""
             },
             "require": {
-                "composer/installers": "~1.0",
                 "drupal/drupal-driver": "*",
                 "php": ">=5.3.0"
             },
+            "conflict": {
+                "drush/drush": "<8.0 || >=10.0"
+            },
             "type": "drupal-drush",
+            "extra": {
+                "installer-name": "BehatDrushEndpoint"
+            },
             "notification-url": "https://packagist.org/downloads/",
             "license": [
-                "GPLv2"
+                "GPL-2.0-or-later"
             ],
             "description": "Drush commandfile for use with drupal/drupal-driver.",
             "homepage": "https://github.com/drush-ops/behat-drush-endpoint",
@@ -7247,7 +7252,7 @@
                 "Drush",
                 "testing"
             ],
-            "time": "2015-11-11T07:34:40+00:00"
+            "time": "2018-09-24T22:42:22+00:00"
         },
         {
             "name": "fabpot/goutte",
