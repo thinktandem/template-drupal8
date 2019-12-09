@@ -78,6 +78,13 @@ function drush_behat_op_create_node($node) {
   if (!isset($node->status)) {
     $node->status = 1;
   }
+  // If 'author' is set, remap it to 'uid'.
+  if (isset($node->author)) {
+    $user = user_load_by_name($node->author);
+    if ($user) {
+      $node->uid = $user->id();
+    }
+  }
 
   // Attempt to decipher any fields that may be specified.
   _drush_behat_expand_entity_fields('node', $node);
@@ -113,7 +120,7 @@ function drush_behat_op_create_term($term) {
   $entity->save();
 
   $term->tid = $entity->id();
-  return $term;
+  return (array) $term;
 }
 
 /**
