@@ -76,3 +76,103 @@ tooling:
       - appserver: /app/vendor/bin/phpunit -c web/core --testsuite=unit --exclude-group Composer web/modules/custom
       - appserver: /app/vendor/bin/phpunit -c web/core --testsuite unit --exclude-group Composer web/themes/custom
       - appserver: /app/vendor/bin/phpstan analyse web/modules/custom web/themes/custom
+  setup:
+    service: appserver
+    cmd: /app/scripts/platform-setup.sh
+    level: app
+    options:
+      force:
+        boolean: true
+        default: false
+        describe: Force the setup even if its already been run
+      github-token:
+        string: true
+        passthrough: true
+        describe: The GitHub API token
+        interactive:
+          required: true
+          type: password
+          message: What is the GitHub API token?
+          weight: 200
+      github-slug:
+        string: true
+        passthrough: true
+        describe: The GitHub repo slug in the form OWNER/REPO eg lando/website
+        interactive:
+          required: true
+          type: input
+          message: What is the GitHub repo slug (owner/repo)?
+          weight: 300
+      name:
+        string: true
+        passthrough: true
+        describe: The name of the Platform.sh instance to spin up
+        interactive:
+          required: true
+          type: input
+          message: What do you want to call this Platform.sh project?
+          weight: 400
+      plan:
+        array: true
+        choices:
+          - development
+          - small
+          - medium
+          - large
+        passthrough: true
+        describe: The Platform.sh project plan
+        interactive:
+          required: true
+          choices:
+            - development
+            - small
+            - medium
+            - large
+          default: us-2.platform.sh
+          type: list
+          message: What kind of plan should the Platform.sh project be?
+          weight: 500
+      region:
+        array: true
+        choices:
+          - au.platform.sh
+          - ca-1.platform.sh
+          - eu-2.platform.sh
+          - us-2.platform.sh
+        passthrough: true
+        describe: The region in which to spin up the Platform.sh project
+        interactive:
+          required: true
+          choices:
+            - name: Dundee
+              value: au.platform.sh
+            - name: Trudeau
+              value: ca-1.platform.sh
+            - name: Merkel
+              value: eu-2.platform.sh
+            - name: Trump
+              value: us-2.platform.sh
+          default: us-2.platform.sh
+          type: list
+          message: In which region do you want to spin up the Platform.sh project?
+          weight: 600
+      platform-supreme-leader-token:
+        string: true
+        passthrough: true
+        describe: The Platform.sh Bossmantoken
+        interactive:
+          required: true
+          type: password
+          message: What is the P.SH token?
+          weight: 100
+      supreme-leader-validator:
+        string: true
+        passthrough: true
+        describe: An email to validate the supreme-leader token against
+      user:
+        string: true
+        passthrough: true
+        describe: The email of a user account you want
+      yes:
+        boolean: true
+        describe: Answer yes to all the questions
