@@ -25,7 +25,7 @@ config:
   webroot: web
 
   # Set this to match the version in your .platform.app.yaml.
-  php: 7.2
+  php: 7.3
 
   # Lando defaults to the latest MySQL release, but Platform.sh uses MariaDB.
   # Specify the version to match what's in services.yaml.
