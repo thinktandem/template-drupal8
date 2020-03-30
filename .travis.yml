@@ -18,7 +18,7 @@ before_install:
   # Install Hyperdrive
   - sudo apt-get -y update
   - sudo apt-get -y install cgroup-bin curl
-  - sudo bash -c "curl -Ls https://github.com/lando/hyperdrive/releases/download/v0.5.4/hyperdrive > /usr/local/bin/hyperdrive"
+  - sudo bash -c "curl -Ls https://github.com/lando/hyperdrive/releases/download/v0.6.1/hyperdrive > /usr/local/bin/hyperdrive"
   - sudo chmod +x /usr/local/bin/hyperdrive
 
 script:
