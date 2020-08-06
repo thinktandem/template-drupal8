@@ -1,5 +1,5 @@
 # Change this name to something that makes sense for your project
-name: infiniteawesome
+name: template-drupal8
 
 # Excludes rarely edited folder / files to win performance.
 excludes:
