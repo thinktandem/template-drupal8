@@ -2468,7 +2468,7 @@
         },
         {
             "name": "drupal/core-vendor-hardening",
-            "version": "8.9.3",
+            "version": "8.9.5",
             "source": {
                 "type": "git",
                 "url": "https://github.com/drupal/core-vendor-hardening.git",
