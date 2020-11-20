@@ -31,6 +31,9 @@ config:
   # Specify the version to match what's in services.yaml.
   database: mariadb
 
+  # Sets the composer version.
+  composer_version: '1.10.17'
+
 # The following additional build step will install the Platform CLI
 # in the application container and auto-run `composer install`
 services:

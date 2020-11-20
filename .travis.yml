@@ -2,7 +2,7 @@ language: php
 
 # This can be set to whatever you want since Lando is taking care of your deps
 php:
-  - 7.2
+  - 7.3
 
 cache:
   directories:
