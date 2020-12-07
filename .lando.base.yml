@@ -15,15 +15,51 @@ excludes:
 # Use the recipe appropriate for your application.
 recipe: platformsh
 
-# Replace with your p.sh ID.
+# Configure the D8 recipe to match up closer to a vanilla platform.sh stack
 config:
+  # Use the recipe appropriate for your application.
   id: REPLACE-ME
+
+  # Allows for XDebug locally.
   variables:
     app:
       php:
         xdebug.remote_connect_back: 1
 
+# The following additional build step will install the Platform CLI
+# in the application container and auto-run `composer install`
+services:
+  app:
+    overrides:
+      environment:
+        BEHAT_PARAMS: '{"extensions" : {"Behat\\MinkExtension" : {"base_url" : "http://nginx/"}, "Drupal\\DrupalExtension" : {"drush" :   {  "root":  "/app/web" }}}}'
+
+# The following entry creates a `lando platform` command that will run
+# any Platform CLI command from inside the container if desired.
 tooling:
   drush:
     service: app
     cmd: /app/vendor/bin/drush --root=/app/web
+  phplint:
+    service: app
+    cmd: /app/vendor/bin/phplint
+  phpcs:
+    service: app
+    cmd: /app/vendor/bin/phpcs
+  phpunit:
+    service: app
+    cmd: /app/vendor/bin/phpunit
+  phpstan:
+    service: app
+    cmd: /app/vendor/bin/phpstan
+  behat:
+    service: app
+    cmd: /app/vendor/bin/behat
+  test:
+    service: app
+    description: Run Tests Locally
+    cmd:
+      - appserver: composer lint
+      - appserver: /app/vendor/bin/phpunit -c web/core --testsuite=unit --exclude-group Composer web/modules/custom
+      - appserver: /app/vendor/bin/phpunit -c web/core --testsuite unit --exclude-group Composer web/themes/custom
+      - appserver: /app/vendor/bin/phpstan analyse web/modules/custom web/themes/custom
