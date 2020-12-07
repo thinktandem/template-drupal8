@@ -24,3 +24,6 @@
 
 # Lint cache
 .phplint-cache
+
+.drush/cache
+private

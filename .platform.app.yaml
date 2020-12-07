@@ -19,6 +19,10 @@ relationships:
 #    solr: 'solrsearch:solr'
 #    redis: 'rediscache:redis'
 
+runtime:
+    extensions:
+        - xdebug
+
 # The size of the persistent disk of the application (in MB).
 disk: 2048
 
