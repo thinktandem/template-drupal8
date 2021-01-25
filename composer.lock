@@ -6780,12 +6780,12 @@
             "version": "1.8.0",
             "source": {
                 "type": "git",
-                "url": "https://github.com/webmozart/assert.git",
+                "url": "https://github.com/webmozarts/assert.git",
                 "reference": "ab2cb0b3b559010b75981b1bdce728da3ee90ad6"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/webmozart/assert/zipball/ab2cb0b3b559010b75981b1bdce728da3ee90ad6",
+                "url": "https://api.github.com/repos/webmozarts/assert/zipball/ab2cb0b3b559010b75981b1bdce728da3ee90ad6",
                 "reference": "ab2cb0b3b559010b75981b1bdce728da3ee90ad6",
                 "shasum": ""
             },
@@ -7503,6 +7503,9 @@
                 "ext-zip": "Enabling the zip extension allows you to unzip archives",
                 "ext-zlib": "Allow gzip compression of HTTP requests"
             },
+            "bin": [
+                "bin/composer"
+            ],
             "type": "library",
             "extra": {
                 "branch-alias": {
@@ -7860,7 +7863,7 @@
         },
         {
             "name": "drupal/core-dev",
-            "version": "8.9.12",
+            "version": "8.9.13",
             "source": {
                 "type": "git",
                 "url": "https://github.com/drupal/core-dev.git",
