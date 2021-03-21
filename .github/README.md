@@ -57,7 +57,7 @@ git remote remove platform
 
 Optionally you might want to visit your built site on Platform.sh at this point to go through the Drupal installation process and get your DB dialed in.
 
-### 3. Setup Local Lando and Connect Platform.sh with GitHub
+### 3. Setup local Lando and connect Platform.sh with GitHub
 
 #### Lando
 
