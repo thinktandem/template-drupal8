@@ -244,13 +244,13 @@ lando php -v
 lando php -i
 
 # Run drush commands
-# replace web if you've moved your webroot to a difference subdirectory
+# Replace web if you've moved your webroot to a difference subdirectory
 cd web
 lando drush status
 lando drush cr
 
 # Run drupal console commands
-# replace web if you've moved your webroot to a difference subdirectory
+# Replace web if you've moved your webroot to a difference subdirectory
 cd web
 lando drupal
 ```
@@ -268,7 +268,7 @@ lando phpcs --config-set installed_paths /app/vendor/drupal/coder/coder_sniffer
 lando phpcs -n --report=full --standard=Drupal --ignore=*.tpl.php --extensions=install,module,php,inc web/modules web/themes web/profiles
 
 # Run phpunit commands
-# replace web if you've moved your webroot to a difference subdirectory
+# Replace web if you've moved your webroot to a difference subdirectory
 cd web
 lando phpunit
 # Run some phpunit tests
