@@ -232,7 +232,7 @@ lando ssh
 lando ssh -- --help
 ```
 
-### Development commands
+### Development Commands
 
 ```bash
 # Run composer things
@@ -255,7 +255,7 @@ cd web
 lando drupal
 ```
 
-### Testing commands
+### Testing Commands
 
 ```bash
 # Lint code
@@ -280,7 +280,7 @@ lando behat
 lando behat --config=/app/tests/behat-lando.yml
 ```
 
-### Platform.sh commands
+### Platform.sh Commands
 
 ```bash
 # List platform commands
