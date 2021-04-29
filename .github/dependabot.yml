@@ -1,0 +1,42 @@
+version: 2
+updates:
+- package-ecosystem: composer
+  directory: "/"
+  schedule:
+    interval: weekly
+    time: "13:00"
+  open-pull-requests-limit: 10
+  ignore:
+  - dependency-name: drush/drush
+    versions:
+    - ">= 10.a, < 11"
+  - dependency-name: drush-ops/behat-drush-endpoint
+    versions:
+    - ">= 8.a, < 9"
+  - dependency-name: drush-ops/behat-drush-endpoint
+    versions:
+    - ">= 9.a, < 10"
+  - dependency-name: overtrue/phplint
+    versions:
+    - ">= 2.a, < 3"
+  - dependency-name: vlucas/phpdotenv
+    versions:
+    - ">= 3.a, < 4"
+  - dependency-name: vlucas/phpdotenv
+    versions:
+    - ">= 5.a, < 6"
+  - dependency-name: drupal/core-recommended
+    versions:
+    - 8.9.13
+  - dependency-name: drupal/core-composer-scaffold
+    versions:
+    - 8.9.13
+  - dependency-name: drupal/core-dev
+    versions:
+    - 8.9.13
+  - dependency-name: vlucas/phpdotenv
+    versions:
+    - 4.2.0
+  - dependency-name: drupal/core-vendor-hardening
+    versions:
+    - 8.9.13
