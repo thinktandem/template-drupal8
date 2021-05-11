@@ -3,7 +3,7 @@ Killer Drupal 8 Workflow for Platform.sh
 
 This project is meant to be forked and used as an easy-to-get-going start state for an awesome dev workflow that includes:
 
-1. Canonical upstream repo on [GitHub](http://github.com)
+1. Canonical upstream repo on [GitHub](https://github.com)
 2. Local development and tooling with [Lando](http://docs.devwithlando.io)
 3. Hosting on [Platform.sh](http://platform.sh)
 4. Automatic manual QA environments for [pull requests](https://docs.platform.sh/administration/integrations/github.html)
@@ -57,7 +57,7 @@ git remote remove platform
 
 Optionally you might want to visit your built site on Platform.sh at this point to go through the Drupal installation process and get your DB dialed in.
 
-### 3. Setup Local Lando and Connect Platform.sh with GitHub
+### 3. Setup local Lando and connect Platform.sh with GitHub
 
 #### Lando
 
@@ -104,7 +104,7 @@ lando platform integration:add \
   --fetch-branches=true
 ```
 
-Once you paste the `webhook url` into GitHub your Platform.sh instance will track agsinst your GitHub repo.
+Once you paste the `webhook url` into GitHub your Platform.sh instance will track against your GitHub repo.
 
 **THIS MEANS THAT YOUR MASTER BRANCH IS NOW DEPLOYABLE!!!**.
 
@@ -169,7 +169,7 @@ git checkout -b 1-fixes-that-thing
 
 # Git commit with a message that matches the issue number
 git add -A
-git commit -m "#1: Describes what i did"
+git commit -m "#1: Describes what I did"
 
 # Push the branch to GitHub
 git push origin 1-fixes-that-thing
@@ -189,7 +189,7 @@ Here is an example PR with:
 
 ### 4. Deploy
 
-When you are statisifed with the above, and any additional QA steps like manual code review you can [merge the pull request](https://help.github.com/articles/merging-a-pull-request/). This will deploy the feature to production.
+When you are satisfied with the above, and any additional QA steps like manual code review you can [merge the pull request](https://help.github.com/articles/merging-a-pull-request/). This will deploy the feature to production.
 
 Lando Reference
 ---------------
@@ -198,7 +198,7 @@ You should definitely check out the [Lando docs](https://docs.devwithlando.io) f
 
 Unless otherwise indicated these should all be run from your repo root (eg the directory that contains the `.lando.yml` for your site).
 
-### Generic Ccommands
+### Generic Commands
 
 ```bash
 # List all available lando commands for this app
@@ -223,7 +223,7 @@ lando rebuild
 lando destroy
 # Get info on lando service logs
 lando logs
-# Get a publically accessible URL. Run lando info to get the proper localhost address
+# Get a publicly accessible URL. Run lando info to get the proper localhost address
 lando share -u http://localhost:32813
 # "SSH" into the appserver
 lando ssh
@@ -232,7 +232,7 @@ lando ssh
 lando ssh -- --help
 ```
 
-### Development commands
+### Development Commands
 
 ```bash
 # Run composer things
@@ -244,18 +244,18 @@ lando php -v
 lando php -i
 
 # Run drush commands
-# replace web if you've moved your webroot to a difference subdirectory
+# Replace web if you've moved your webroot to a difference subdirectory
 cd web
 lando drush status
 lando drush cr
 
 # Run drupal console commands
-# replace web if you've moved your webroot to a difference subdirectory
+# Replace web if you've moved your webroot to a difference subdirectory
 cd web
 lando drupal
 ```
 
-### Testing commands
+### Testing Commands
 
 ```bash
 # Lint code
@@ -268,7 +268,7 @@ lando phpcs --config-set installed_paths /app/vendor/drupal/coder/coder_sniffer
 lando phpcs -n --report=full --standard=Drupal --ignore=*.tpl.php --extensions=install,module,php,inc web/modules web/themes web/profiles
 
 # Run phpunit commands
-# replace web if you've moved your webroot to a difference subdirectory
+# Replace web if you've moved your webroot to a difference subdirectory
 cd web
 lando phpunit
 # Run some phpunit tests
@@ -280,7 +280,7 @@ lando behat
 lando behat --config=/app/tests/behat-lando.yml
 ```
 
-### Platform.sh commands
+### Platform.sh Commands
 
 ```bash
 # List platform commands
